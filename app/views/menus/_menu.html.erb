@@ -1,11 +1,23 @@
-<div id="<%= dom_id menu %>">
-  <div class="card rounded" style="width: 18rem;">
+<div id="<%= dom_id menu %>" class="col" >
+  <div class="card border-dark text-center mb-3 mt-3" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title"><%= menu.name %></h5>
-      <p class="card-text"><strong>Price:</strong> Rp <%= menu.price %></p>
-      <p class="card-text"><strong>Category:</strong> <%= menu.category %></p>
-      <p class="card-text"><%= menu.desc %></p>
+      <h5 class="card-title">
+        <%= menu.name %>
+      </h5>
+      <p class="card-text">
+        <strong>Price:</strong> 
+        Rp <%= menu.price %>
+      </p>
+      <p class="card-text">
+        <strong>Category:</strong> 
+        <%= menu.category %>
+      </p>
+      <p class="card-text">
+        <%= menu.desc %>
+      </p>
+      <p class="card-text">
+        <%= link_to "Detail this menu", menu %>
+      </p>
+    </div>
   </div>
-</div>
-
 </div>

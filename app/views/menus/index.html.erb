@@ -1,41 +1,42 @@
 <p style="color: green"><%= notice %></p>
 
-<h1 class="text-center">Food Menus</h1>
+<h1 class="text-center">Restaurant Menus</h1>
 
-<div class="">
-  <%= button_to "New menu", new_menu_path, method: "get" %>
-</div>
-
-<div class="container" id="menus">
-  <div class="row align-items-center">
-    <div class="col">
-      <% @menus.each do |menu| %>
-        <%= render menu %>
-        <p>
-          <%= button_to "Detail this menu", menu, method: "get" %>
-        </p>
-      <% end %>
+<div class="container">
+  <div class="row justify-content-between">
+    <div class="col-4">
+      <%= button_to "Create Menu", new_menu_path, method: :get, class: "btn btn-primary" %>
+    </div>
+    <div class="col-4">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Order
+  </button>
     </div>
   </div>
 </div>
 
+<div class="container" id="menus">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+      <% @menus.each do |menu| %>
+        <%= render menu %>
+      <% end %>
+  </div>
+</div>
+
 <br>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch Order
-</button>
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Order</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        Detail Order
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
