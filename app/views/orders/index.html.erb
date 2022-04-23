@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-center">Restaurant Orders</h1>
+
+<div class="container">
+  <div class="row justify-content-between">
+    <div class="col-4">
+      <%= button_to "New Order Customer", new_order_path, method: :get, class: "btn btn-primary" %>
+    </div>
+    <div class="col-4">
+      <%= button_to "Menus", "/menus", method: :get, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="orders">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% @orders.each do |order| %>
+      <%= render order %>
+    <% end %>
+  </div>
+</div>

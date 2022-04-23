@@ -1,0 +1,34 @@
+<div id="<%= dom_id order %>" class="col" >
+  <div class="card border-dark text-center mb-3 mt-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">
+        <strong>Name:</strong>
+        <%= order.name %>
+      </h5>
+      <p class="card-text">
+        <strong>Email:</strong>
+        <%= order.email %>
+      </p>
+      <p class="card-text">
+        <strong>Address:</strong>
+        <%= order.address %>
+      </p>
+      <p class="card-text">
+        <strong>Menu:</strong>
+        <%= order.menu_id %>
+      </p>
+      <p class="card-text">
+        <strong>Quantity:</strong>
+        <%= order.quantity %>
+      </p>
+      <p class="card-text">
+        <strong>Total price:</strong>
+        Rp <%= order.total_price %>
+      </p>
+      <p class="card-text">
+        <%= link_to "Show this order", order %>
+      </p>
+    </div>
+  </div>
+</div>
+
